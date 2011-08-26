@@ -5,7 +5,7 @@
 
 int main()
 {
-    char source[128] = " bei          jing huan ying nin! ";
+    char source[128] = " bei          jingjj huan ying nin! ";
     int argc = 0;
     char *argv[16];
     char *str = source;
@@ -63,7 +63,13 @@ int main()
        printf("%d\n", strlen(argv[i]));
    }
    
-   int store_len[100] = {0};
+   //int store_len[100] = {0};
+   int store_len[100];
+   
+   for (i = 0; i < 100; i++)
+   {
+        store_len[i] = 0;
+   }
 
    for (i = 0; i < argc; i++)
    {
@@ -101,7 +107,7 @@ int main()
        }
    }
 
-   printf("There are %d word are longest,", count);
+   printf("There are %d word are longest\n", count);
    
    for (i = 0; i < 100; i++)
    {  
