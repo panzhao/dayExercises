@@ -77,13 +77,16 @@ void traverse(STU * head)
 
 void digui(STU *head)
 {
-    if (head != NULL)
+    if (head->next != NULL)
     { 
         head = head->next;
         digui(head);
+	printf("test\n");
     }
-
-    head->next = head2;
+    else
+    {
+        head->next = head2;
+    }
 }
 
 int main(int argc, const char *argv[])
@@ -91,8 +94,8 @@ int main(int argc, const char *argv[])
     creat_link1();
     creat_link2();
     
-    traverse(head1);
-    traverse(head2);
+ //   traverse(head1);
+   // traverse(head2);
     
     digui(head1);
 
